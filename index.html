@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.css' rel='stylesheet' />
+        <link href='style.css' rel='stylesheet' />
+
+        <script src='https://cdn.jsdelivr.net/combine/npm/fullcalendar@5.1.0,npm/fullcalendar@5.1.0/locales-all.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/locales-all.min.js'></script>
+        <title></title>
+
+    </head>
+ 
+    <body>
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+        <!-- Add Firebase products that you want to use -->
+        
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+        
+        <div class="calendar_space"> 
+        <div id='calendar'></div>
+        </div>
+
+        <div>
+            Title<input type="text" id="text">
+        </div>
+
+        <!-- Previously loaded Firebase SDKs -->
+        <div>
+            
+           <!---<input type=”date” name=”date”>--->
+           <label for="meeting-time">Choose a time for your appointment:</label>
+
+           <input type="datetime-local" id="meeting-time"
+                  name="meeting-time" value="2020-01-01T00:00"
+                  >
+ 
+        </div>
+
+        <div>
+            <button type="button" id="submit">追加</button>
+        </div>
+
+        <script src="init-firebase.js"></script>
+        
+    </body>
+ 
+</html>
