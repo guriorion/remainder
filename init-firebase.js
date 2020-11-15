@@ -20,6 +20,12 @@ const collection = db.collection("schedule")
 const submitButton = document.getElementById("submit")
 const datetimeform = document.getElementById("meeting-time")
 const planname = document.getElementById("text")
+
+const dialog = document.getElementById('dialog');
+const yes = document.getElementById('yes');
+const no = document.getElementById('no');
+const cancel = document.getElementById('cancel');
+
 let events =[]
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -35,7 +41,19 @@ document.addEventListener('DOMContentLoaded', function() {
               window.open(eventObj.url);
               info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
           } else {
-              alert('Clicked ' + eventObj.title);
+            addEventListener('click', function() {
+                dialog.style.display = 'block';
+                
+            })
+             
+            //「はい」がクリックされたら
+            yes.addEventListener('click', function(){ console.log('yes') });
+             
+            //「いいえ」がクリックされたら
+            no.addEventListener('click', function(){ console.log('no') });
+             
+            //「キャンセル」がクリックされたら
+            cancel.addEventListener('click', function(){ console.log('cancel') });
           }
       },
       headerToolbar: {

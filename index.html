@@ -21,11 +21,18 @@
         <!-- Add Firebase products that you want to use -->
         
         <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
-        
-        <div class="calendar_space"> 
-        <div id='calendar'></div>
+        <div id="space">
+            <div class="calendar_space"> 
+                <div id='calendar'>
+                </div>
+            </div>
+            <div id="dialog">
+                <p>""</p>
+                <button id="yes">変更</button>
+                <button id="no">削除</button>
+                <button id="cancel">キャンセル</button>
+            </div>
         </div>
-
         <div>
             Title<input type="text" id="text">
         </div>
@@ -41,6 +48,9 @@
                   >
  
         </div>
+
+         
+        <button id="btn">ボタン</button>
 
         <div>
             <button type="button" id="submit">追加</button>
