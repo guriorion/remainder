@@ -1,10 +1,14 @@
 #space{
-    position: relative;
+    
 }
 #calendar{
+    position: relative;
     max-width: 1200px;
 }
 #dialog {
+    position: absolute;
+    top:50px;
+    left: 100px;
     width: 250px;
     margin: auto;
     margin-top: 40vh;
@@ -14,6 +18,5 @@
     border: 1px solid #aaa;
     box-shadow: 2px 2px 4px #888;
     display: none;
-    position: absolute;
-    
+
 }
