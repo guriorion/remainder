@@ -1,22 +1,28 @@
-#space{
-    
+#space {
+  position: relative;
 }
-#calendar{
-    position: relative;
-    max-width: 1200px;
+#calendar {
+  max-width: 1200px;
 }
 #dialog {
-    position: absolute;
-    top:50px;
-    left: 100px;
-    width: 250px;
-    margin: auto;
-    margin-top: 40vh;
-    padding: 30px 20px;
-    display: none;
-    text-align: center;
-    border: 1px solid #aaa;
-    box-shadow: 2px 2px 4px #888;
-    display: none;
-
+  position: absolute;
+  top: 40%;
+  left: 28%;
+  height: 200px;
+  width: 300px;
+  margin: auto;
+  padding: 30px 20px;
+  display: none;
+  text-align: center;
+  vertical-align: bottom;
+  border: 1px solid #aaa;
+  box-shadow: 2px 2px 4px #888;
+  background-color: white;
+  z-index: 2;
+}
+#dialog_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
 }
