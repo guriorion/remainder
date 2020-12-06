@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             no.addEventListener('click', function(){ console.log('no') });
              
             //「キャンセル」がクリックされたら
-            cancel.addEventListener('click', function(){ console.log('cancel') });
+            cancel.addEventListener('click', function(){ dialog.style.display = 'none' })
           }
       },
       headerToolbar: {
