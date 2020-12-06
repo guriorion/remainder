@@ -24,11 +24,14 @@
         <div id="space">
             
             <div id="dialog">
-                <div id="dialog_text">
-                    <p>""</p>
-                    <button id="yes">変更</button>
-                    <button id="no">削除</button>
-                                 <button id="cancel">キャンセル</button>
+                <div id="dialog-text">
+                    Title<input type="text" id="dialog-title">
+                    Time<input type="datetime-local" id="dialog-time"name="meeting-time" value="2020-01-01T00:00">
+                    <div id="dialog-btn">
+                        <button id="yes">変更</button>
+                        <button id="no">削除</button>
+                        <button id="cancel">キャンセル</button>
+                    </div>
                 </div>
             </div>
             <div class="calendar_space"> 
@@ -47,12 +50,8 @@
            <label for="meeting-time">Choose a time for your appointment:</label>
 
            <input type="datetime-local" id="meeting-time"
-                  name="meeting-time" value="2020-01-01T00:00"
-                  >
- 
+                  name="meeting-time" value="2020-01-01T00:00">
         </div>
-
-         
         <button id="btn">ボタン</button>
 
         <div>

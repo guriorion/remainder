@@ -27,7 +27,13 @@ const no = document.getElementById('no');
 const cancel = document.getElementById('cancel');
 
 let events =[]
-
+//フォームに現在時刻を表示
+window.addEventListener('load', () => {
+  const now = new Date();
+  now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+  document.getElementById('meeting-time').value = now.toISOString().slice(0, -1);
+});
+//イベントクリック時
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -83,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
+//追加ボタンを押した時
 submitButton.addEventListener("click", () => {
   
   //console.log(datetimeform.value)
