@@ -26,6 +26,7 @@ const yes = document.getElementById('yes');
 const no = document.getElementById('no');
 const cancel = document.getElementById('cancel');
 
+let isDialog = false;
 let events =[]
 //フォームに現在時刻を表示
 window.addEventListener('load', () => {
@@ -48,8 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
               info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
           } else {
             addEventListener('click', function() {
+              if(!isDialog) {
                 dialog.style.display = 'block';
-                
+                isDialog = true;
+             }
             })
              
             //「はい」がクリックされたら
@@ -60,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
              
             //「キャンセル」がクリックされたら
             cancel.addEventListener('click', function(){ dialog.style.display = 'none' })
+            isDialog = false;
           }
       },
       headerToolbar: {
